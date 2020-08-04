@@ -1,7 +1,30 @@
 <div id="app">
   <app-loading *ngIf="!isModelLoaded"></app-loading>
-  <div class="content columns">
+  <div class="content columns" *ngIf="isModelLoaded">
     <div class="upload-wrapper column is-half">
+      <div class="image-wrapper" [hidden]="!img">
+        <img #image alt="Uploaded image" [src]="img" />
+        <div class="results">
+          {{ result.label }}
+          {{ result.confidence }}%
+        </div>
+     </div>
+     <div class="file has-name is-boxed">
+        <label class="file-label">
+          <input class="file-input" type="file" name="uploadImage" (change)="uploadImage($event)" />
+          <span class="file-cta">
+            <span class="file-icon">
+              <img src="/assets/_ionicons_svg_md-cloud-upload.svg" alt="Upload icon" />
+            </span>
+            <span class="file-label">
+              Choose a file...
+            </span>
+          </span>
+          <span class="file-name">
+            {{ imgName }}
+          </span>
+        </label>
+      </div>
     </div>
     <div class="result-wrapper column">
       <div class="giphy-wrapper">
