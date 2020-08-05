@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
   }
 
   private classify() {
-    console.log(this.image)
     this.classifier.classify(this.image.nativeElement, (err, results) => {
       if (err) {
         console.error(err)
