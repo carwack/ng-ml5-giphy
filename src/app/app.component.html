@@ -26,8 +26,15 @@
         </label>
       </div>
     </div>
-    <div class="result-wrapper column">
+    <div class="result-wrapper column" *ngIf="img">
       <div class="giphy-wrapper">
+        <div *ngIf="changingGif">
+          <img class="timer-icon" src="/assets/timer.svg" alt="Loading icon"/>
+        </div>
+        <ng-container *ngIf="!changingGif">
+          <img [src]="result.gif.gifUrl" [alt]="result.gif.title" />
+          <a [href]="result.gif.giphyUrl">via GIPHY</a>
+        </ng-container>
       </div>
     </div>
   </div>

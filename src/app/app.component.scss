@@ -64,4 +64,13 @@ body {
     background-color: #ffffff;
     padding: 1.5rem 1.5rem 3rem;
   }
+
+  .timer-icon {
+    height: 50px;
+    margin-left: 15px;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
 }

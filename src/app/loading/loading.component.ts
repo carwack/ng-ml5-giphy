@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-loading',
@@ -10,11 +10,5 @@ import { Component, OnInit } from '@angular/core';
   `,
   styleUrls: ['./loading.component.scss']
 })
-export class LoadingComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class LoadingComponent {
 }
