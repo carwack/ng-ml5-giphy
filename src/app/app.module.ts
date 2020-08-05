@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoadingComponent } from './loading/loading.component';
+import { GiphyService } from './services/giphy.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,12 @@ import { LoadingComponent } from './loading/loading.component';
     LoadingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    GiphyService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
