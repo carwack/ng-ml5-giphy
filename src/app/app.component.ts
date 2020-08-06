@@ -1,13 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import ml5 from 'ml5';
-import { GiphyService, IGiphy } from './services/giphy.service';
-
-interface IResult {
-  label: string;
-  confidence: string;
-  gif: IGiphy;
-}
-
+import { GiphyService } from './services/giphy.service';
+import { IResult } from './interfaces/iresult';
 
 @Component({
   selector: 'app-root',

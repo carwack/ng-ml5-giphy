@@ -2,12 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-
-export interface IGiphy {
-  title: string;
-  gifUrl: string;
-  giphyUrl: string;
-}
+import { IGiphy } from '../interfaces/igiphy';
 
 @Injectable({
   providedIn: 'root',
